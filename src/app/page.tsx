@@ -24,9 +24,9 @@ export default function HomePage() {
             </div>
             <p className="text-lg md:text-xl text-[#FFB800] text-glow-green max-w-2xl mx-auto mb-2">
               Your favorite TOXIC trio{' '}
-              <a href="https://twitter.com/PPRTyler" target="_blank" rel="noopener noreferrer" className="hover:underline">@PPRTyler</a>{' '}
-              <a href="https://twitter.com/BestBallGuy" target="_blank" rel="noopener noreferrer" className="hover:underline">@BestBallGuy</a>{' '}
-              <a href="https://twitter.com/Emo_Cowboy" target="_blank" rel="noopener noreferrer" className="hover:underline">@Emo_Cowboy</a>{' '}
+              <a href="https://x.com/PPRTyler" target="_blank" rel="noopener noreferrer" className="hover:underline">@PPRTyler</a>{' '}
+              <a href="https://x.com/BestBallGuy" target="_blank" rel="noopener noreferrer" className="hover:underline">@BestBallGuy</a>{' '}
+              <a href="https://x.com/Emo__Cowboy" target="_blank" rel="noopener noreferrer" className="hover:underline">@Emo_Cowboy</a>{' '}
               with live best ball streams EVERY week
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">

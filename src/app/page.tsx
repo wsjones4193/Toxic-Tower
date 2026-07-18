@@ -22,7 +22,7 @@ export default function HomePage() {
                 priority
               />
             </div>
-            <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-[#FFB800] text-glow-green max-w-2xl mx-auto mb-8">
               Your crew's hub for fantasy football rankings and analysis.
               Built for the homies.
             </p>

@@ -88,7 +88,7 @@ export default function ArticleEditor({ article, tags }: Props) {
           published,
           tag_ids: selectedTags,
         }
-        localStorage.setItem(`edg-draft-${article?.id ?? 'new'}`, JSON.stringify(draft))
+        localStorage.setItem(`tt-draft-${article?.id ?? 'new'}`, JSON.stringify(draft))
         setAutosaveStatus('saved')
       }, 2000)
     },
@@ -131,7 +131,7 @@ export default function ArticleEditor({ article, tags }: Props) {
 
       if (res.ok) {
         const data = await res.json()
-        localStorage.removeItem(`edg-draft-${article?.id ?? 'new'}`)
+        localStorage.removeItem(`tt-draft-${article?.id ?? 'new'}`)
         toast.success(published ? 'Article published!' : 'Draft saved!')
         if (!article) {
           router.push(`/admin/articles/${data.id}/edit`)

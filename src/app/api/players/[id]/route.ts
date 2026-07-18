@@ -22,7 +22,7 @@ export async function PATCH(
   const supabase = await createAdminClient()
 
   const { data, error } = await supabase
-    .from('edg_players')
+    .from('tt_players')
     .update({ ...body, updated_at: new Date().toISOString() })
     .eq('id', id)
     .select()
@@ -45,7 +45,7 @@ export async function DELETE(
 
   const { id } = await params
   const supabase = await createAdminClient()
-  const { error } = await supabase.from('edg_players').delete().eq('id', id)
+  const { error } = await supabase.from('tt_players').delete().eq('id', id)
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 400 })

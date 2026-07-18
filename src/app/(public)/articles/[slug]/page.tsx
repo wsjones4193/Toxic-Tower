@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const supabase = await createClient()
   const { data } = await supabase
-    .from('edg_articles')
+    .from('tt_articles')
     .select('title, excerpt, featured_image_url')
     .eq('slug', slug)
     .eq('published', true)
@@ -39,8 +39,8 @@ export default async function ArticleDetailPage({ params }: Props) {
   const supabase = await createClient()
 
   const { data } = await supabase
-    .from('edg_articles')
-    .select('*, tags:edg_article_tags(tag:edg_tags(*))')
+    .from('tt_articles')
+    .select('*, tags:tt_article_tags(tag:tt_tags(*))')
     .eq('slug', slug)
     .eq('published', true)
     .single()
@@ -87,7 +87,7 @@ export default async function ArticleDetailPage({ params }: Props) {
           <Link
             key={t.id}
             href={`/tags/${t.slug}`}
-            className="text-xs px-2.5 py-1 rounded-full bg-[#39ff14]/10 text-[#39ff14] hover:bg-[#39ff14]/20 transition-colors"
+            className="text-xs px-2.5 py-1 rounded-full bg-[#FFB800]/10 text-[#FFB800] hover:bg-[#FFB800]/20 transition-colors"
           >
             {t.name}
           </Link>
@@ -106,10 +106,10 @@ export default async function ArticleDetailPage({ params }: Props) {
         className="prose prose-invert prose-sm md:prose-base max-w-none
           prose-headings:text-white prose-headings:font-bold
           prose-p:text-white/80 prose-p:leading-relaxed
-          prose-a:text-[#00d4ff] prose-a:no-underline hover:prose-a:underline
+          prose-a:text-[#8B2FC9] prose-a:no-underline hover:prose-a:underline
           prose-strong:text-white
-          prose-blockquote:border-[#39ff14] prose-blockquote:text-white/60
-          prose-code:text-[#39ff14] prose-code:bg-white/5 prose-code:rounded prose-code:px-1
+          prose-blockquote:border-[#FFB800] prose-blockquote:text-white/60
+          prose-code:text-[#FFB800] prose-code:bg-white/5 prose-code:rounded prose-code:px-1
           prose-pre:bg-[#1a1a1a] prose-pre:border prose-pre:border-white/8
           prose-hr:border-white/10
           prose-img:rounded-lg

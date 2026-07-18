@@ -104,7 +104,7 @@ export default function RankingsClient({
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `edg-rankings-${activePos.toLowerCase()}.csv`
+    a.download = `tt-rankings-${activePos.toLowerCase()}.csv`
     a.click()
     URL.revokeObjectURL(url)
   }

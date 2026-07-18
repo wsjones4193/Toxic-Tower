@@ -40,7 +40,7 @@ export async function GET(request: NextRequest) {
     return new NextResponse(JSON.stringify(rows, null, 2), {
       headers: {
         'Content-Type': 'application/json',
-        'Content-Disposition': `attachment; filename="edg-rankings-${pos.toLowerCase()}.json"`,
+        'Content-Disposition': `attachment; filename="tt-rankings-${pos.toLowerCase()}.json"`,
       },
     })
   }
@@ -54,7 +54,7 @@ export async function GET(request: NextRequest) {
   return new NextResponse(csv, {
     headers: {
       'Content-Type': 'text/csv',
-      'Content-Disposition': `attachment; filename="edg-rankings-${pos.toLowerCase()}.csv"`,
+      'Content-Disposition': `attachment; filename="tt-rankings-${pos.toLowerCase()}.csv"`,
     },
   })
 }

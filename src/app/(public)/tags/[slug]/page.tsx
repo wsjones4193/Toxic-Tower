@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const supabase = await createClient()
   const { data } = await supabase
-    .from('edg_tags')
+    .from('tt_tags')
     .select('name')
     .eq('slug', slug)
     .single()
@@ -29,7 +29,7 @@ export default async function TagPage({ params }: Props) {
   const supabase = await createClient()
 
   const { data: tag } = await supabase
-    .from('edg_tags')
+    .from('tt_tags')
     .select('*')
     .eq('slug', slug)
     .single()
@@ -37,7 +37,7 @@ export default async function TagPage({ params }: Props) {
   if (!tag) notFound()
 
   const { data: articleTags } = await supabase
-    .from('edg_article_tags')
+    .from('tt_article_tags')
     .select('article_id')
     .eq('tag_id', tag.id)
 
@@ -45,8 +45,8 @@ export default async function TagPage({ params }: Props) {
 
   const { data: articles } = ids.length
     ? await supabase
-        .from('edg_articles')
-        .select('*, tags:edg_article_tags(tag:edg_tags(*))')
+        .from('tt_articles')
+        .select('*, tags:tt_article_tags(tag:tt_tags(*))')
         .eq('published', true)
         .in('id', ids)
         .order('published_at', { ascending: false })
@@ -63,7 +63,7 @@ export default async function TagPage({ params }: Props) {
 
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-2">
-          <span className="text-xs px-2.5 py-1 rounded-full bg-[#39ff14]/10 text-[#39ff14] font-medium">
+          <span className="text-xs px-2.5 py-1 rounded-full bg-[#FFB800]/10 text-[#FFB800] font-medium">
             Tag
           </span>
           <h1 className="text-3xl font-extrabold text-white">{tag.name}</h1>

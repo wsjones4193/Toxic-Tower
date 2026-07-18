@@ -13,11 +13,11 @@ export default async function EditArticlePage({ params }: Props) {
 
   const [{ data: article }, { data: tags }] = await Promise.all([
     supabase
-      .from('edg_articles')
-      .select('*, tags:edg_article_tags(tag:edg_tags(*))')
+      .from('tt_articles')
+      .select('*, tags:tt_article_tags(tag:tt_tags(*))')
       .eq('id', id)
       .single(),
-    supabase.from('edg_tags').select('*').order('name'),
+    supabase.from('tt_tags').select('*').order('name'),
   ])
 
   if (!article) notFound()

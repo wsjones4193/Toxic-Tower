@@ -24,13 +24,13 @@ export async function PUT(
   const supabase = await createAdminClient()
 
   const { data: existing } = await supabase
-    .from('edg_articles')
+    .from('tt_articles')
     .select('published, published_at')
     .eq('id', id)
     .single()
 
   const { data: article, error } = await supabase
-    .from('edg_articles')
+    .from('tt_articles')
     .update({
       title,
       slug,
@@ -53,9 +53,9 @@ export async function PUT(
   }
 
   // Replace tags
-  await supabase.from('edg_article_tags').delete().eq('article_id', id)
+  await supabase.from('tt_article_tags').delete().eq('article_id', id)
   if (tag_ids?.length) {
-    await supabase.from('edg_article_tags').insert(
+    await supabase.from('tt_article_tags').insert(
       tag_ids.map((tag_id: string) => ({ article_id: id, tag_id }))
     )
   }
@@ -74,8 +74,8 @@ export async function DELETE(
   const { id } = await params
   const supabase = await createAdminClient()
 
-  await supabase.from('edg_article_tags').delete().eq('article_id', id)
-  const { error } = await supabase.from('edg_articles').delete().eq('id', id)
+  await supabase.from('tt_article_tags').delete().eq('article_id', id)
+  const { error } = await supabase.from('tt_articles').delete().eq('id', id)
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 400 })

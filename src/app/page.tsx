@@ -22,7 +22,7 @@ export default function HomePage() {
                 priority
               />
             </div>
-            <p className="text-lg md:text-xl text-[#FFB800] text-glow-green max-w-2xl mx-auto mb-2">
+            <p className="text-lg md:text-xl text-white max-w-2xl mx-auto mb-2">
               Your favorite TOXIC trio{' '}
               <a href="https://x.com/PPRTyler" target="_blank" rel="noopener noreferrer" className="hover:underline">@PPRTyler</a>{' '}
               <a href="https://x.com/BestBallGuy" target="_blank" rel="noopener noreferrer" className="hover:underline">@BestBallGuy</a>{' '}

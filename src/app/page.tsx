@@ -22,10 +22,31 @@ export default function HomePage() {
                 priority
               />
             </div>
-            <p className="text-lg md:text-xl text-[#FFB800] text-glow-green max-w-2xl mx-auto mb-8">
-              Your crew's hub for fantasy football rankings and analysis.
-              Built for the homies.
+            <p className="text-lg md:text-xl text-[#FFB800] text-glow-green max-w-2xl mx-auto mb-2">
+              Your favorite TOXIC trio{' '}
+              <a href="https://twitter.com/PPRTyler" target="_blank" rel="noopener noreferrer" className="hover:underline">@PPRTyler</a>{' '}
+              <a href="https://twitter.com/BestBallGuy" target="_blank" rel="noopener noreferrer" className="hover:underline">@BestBallGuy</a>{' '}
+              <a href="https://twitter.com/Emo_Cowboy" target="_blank" rel="noopener noreferrer" className="hover:underline">@Emo_Cowboy</a>{' '}
+              with live best ball streams EVERY week
             </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <a
+                href="https://www.youtube.com/@TheToxicTower"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 text-white/50 text-sm border border-white/10 hover:bg-white/10 hover:text-white/80 transition-colors"
+              >
+                YouTube →
+              </a>
+              <a
+                href="https://play.underdogsports.com/vgwg/p-toxic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 text-white/50 text-sm border border-white/10 hover:bg-white/10 hover:text-white/80 transition-colors"
+              >
+                Play Underdog →
+              </a>
+            </div>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/rankings"

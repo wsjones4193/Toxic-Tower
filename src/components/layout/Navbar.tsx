@@ -18,7 +18,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-[#0a0710]/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-white/5 bg-[#231540]/95 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -31,11 +31,7 @@ export default function Navbar() {
               className="rounded-md"
             />
             <span className="hidden sm:block font-bold text-white text-lg leading-tight">
-              <span className="text-[#FFB800] text-glow-green">The Toxic</span>
-              <br />
-              <span className="text-xs font-normal text-white/60 tracking-widest uppercase">
-                Tower
-              </span>
+              Toxic Tower
             </span>
           </Link>
 

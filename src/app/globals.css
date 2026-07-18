@@ -48,7 +48,7 @@
 }
 
 :root {
-  --background: #0a0710;
+  --background: #2d1b4e;
   --foreground: #f5f5f5;
   --card: #120d1e;
   --card-foreground: #f5f5f5;
@@ -69,7 +69,7 @@
   --radius: 0.5rem;
   --surface: #120d1e;
   --surface-elevated: #1a1030;
-  --sidebar: #0e0a1a;
+  --sidebar: #231540;
   --sidebar-foreground: #f5f5f5;
   --sidebar-primary: #FFB800;
   --sidebar-primary-foreground: #050505;
@@ -99,10 +99,10 @@
 @layer utilities {
   .glow-green {
     box-shadow:
-      0 0 15px rgba(255, 184, 0, 0.6),
-      0 0 40px rgba(255, 184, 0, 0.4),
-      0 0 80px rgba(255, 184, 0, 0.2),
-      0 0 140px rgba(255, 184, 0, 0.08);
+      0 0 15px rgba(255, 255, 255, 0.5),
+      0 0 40px rgba(255, 255, 255, 0.25),
+      0 0 80px rgba(255, 255, 255, 0.1),
+      0 0 140px rgba(255, 255, 255, 0.05);
   }
   .glow-blue {
     box-shadow:

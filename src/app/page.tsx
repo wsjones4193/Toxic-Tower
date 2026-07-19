@@ -28,8 +28,8 @@ export default function HomePage() {
               Your favorite TOXIC trio{' '}
               <a href="https://x.com/PPRTyler" target="_blank" rel="noopener noreferrer" className="text-[#FFB800] hover:underline">@PPRTyler</a>{' '}
               <a href="https://x.com/BestBallGuy" target="_blank" rel="noopener noreferrer" className="text-[#FFB800] hover:underline">@BestBallGuy</a>{' '}
-              <a href="https://x.com/Emo__Cowboy" target="_blank" rel="noopener noreferrer" className="text-[#FFB800] hover:underline">@Emo_Cowboy</a>{' '}
-              with live best ball streams EVERY week
+              <a href="https://x.com/Emo__Cowboy" target="_blank" rel="noopener noreferrer" className="text-[#FFB800] hover:underline">@Emo_Cowboy</a>
+              <br />with live best ball streams EVERY week
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <a

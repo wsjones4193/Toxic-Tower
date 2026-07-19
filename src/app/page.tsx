@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import { FileText, TrendingUp, ScrollText, ShoppingBag, Youtube, ExternalLink } from 'lucide-react'
+import { FileText, TrendingUp, ScrollText, ShoppingBag, ExternalLink } from 'lucide-react'
 
 export default function HomePage() {
   return (
@@ -38,7 +38,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 text-white/60 text-sm border border-white/10 hover:bg-white/10 hover:text-white transition-colors"
               >
-                <Youtube size={14} /> YouTube
+                YouTube
               </a>
               <a
                 href="https://play.underdogsports.com/vgwg/p-toxic"

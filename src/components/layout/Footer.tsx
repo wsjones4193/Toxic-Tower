@@ -21,6 +21,9 @@ export default function Footer() {
           </div>
 
           <nav className="flex items-center gap-6 text-sm text-white/50">
+            <Link href="/about" className="hover:text-white/80 transition-colors">
+              About
+            </Link>
             <Link href="/articles" className="hover:text-white/80 transition-colors">
               Articles
             </Link>

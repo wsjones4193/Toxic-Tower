@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import { FileText, TrendingUp, ScrollText, ShoppingBag, ExternalLink } from 'lucide-react'
+import { FileText, TrendingUp, ScrollText, ShoppingBag, ExternalLink, Users } from 'lucide-react'
 
 export default function HomePage() {
   return (
@@ -54,6 +54,20 @@ export default function HomePage() {
 
         {/* Cards */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+
+          {/* About — full width */}
+          <Link href="/about" className="group block rounded-2xl border border-white/8 bg-white/3 hover:bg-white/6 hover:border-[#8B2FC9]/40 transition-all duration-200 p-8 mb-4">
+            <div className="flex items-center gap-4">
+              <div className="p-3 rounded-xl bg-[#8B2FC9]/20 text-[#8B2FC9]">
+                <Users size={24} />
+              </div>
+              <div>
+                <h2 className="text-xl font-bold text-white group-hover:text-[#FFB800] transition-colors">About the Tower</h2>
+                <p className="text-sm text-white/40">Meet the trio behind the toxic takes</p>
+              </div>
+              <span className="ml-auto text-white/20 group-hover:text-[#FFB800] transition-colors text-2xl">→</span>
+            </div>
+          </Link>
 
           {/* Articles — full width */}
           <Link href="/articles" className="group block rounded-2xl border border-white/8 bg-white/3 hover:bg-white/6 hover:border-[#8B2FC9]/40 transition-all duration-200 p-8 mb-4">

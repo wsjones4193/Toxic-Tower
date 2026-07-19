@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'The Toxic Tower Fantasy Football',
-    template: '%s | The Toxic Tower',
+    default: 'Toxic Tower',
+    template: '%s | Toxic Tower',
   },
   description:
     'Expert fantasy football rankings, analysis, and strategy from The Toxic Tower. Built for the homies.',
